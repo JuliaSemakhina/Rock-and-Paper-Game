@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700;800;900&display=swap');
+
+:root {
+    --clr-neutral-dark: hsl(229, 25%, 31%);
+    --clr-neutral-text: hsl(229, 64%, 46%);
+    --clr-neutral-header: hsl(217, 16%, 45%);
+
+    --clr-primary-scissors: linear-gradient(to bottom, hsl(39, 89%, 49%), hsl(40, 84%, 53%));
+    --clr-primary-paper: linear-gradient(to bottom, hsl(230, 89%, 62%), hsl(230, 89%, 65%));
+    --clr-primary-rock: linear-gradient(to bottom, hsl(349, 71%, 52%), hsl(349, 70%, 56%));
+    --clr-primary-lizard: linear-gradient(to bottom, hsl(261, 73%, 60%), hsl(261, 72%, 63%));
+    --clr-primary-cyan: linear-gradient(to bottom, hsl(189, 59%, 53%), hsl(189, 58%, 57%));
+
+
+    --clr-accent: radial-gradient( circle at 50% 10%, hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+
+    --font-base: 'Barlow Semi Condensed', sans-serif;;
+
+    --fw-regular: 600;
+    --fw-bold: 700;
+
+}
+
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/*
+  2. Remove default margin
+*/
+* {
+    margin: 0;
+}
+
+
+/*
+  Typographic tweaks!
+  4. Add accessible line-height
+  5. Improve text rendering
+*/
+body {
+    -webkit-font-smoothing: antialiased;
+}
+
+/*
+  6. Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+/*
+  7. Remove built-in form typography styles
+*/
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/*
+  8. Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+
+
+body {
+    font-family: var(--font-base);
+    font-weight: var(--fw-regular);
+    background: var(--clr-accent);
+    min-height: 100vh;
+    color: #fff;
+
+/*    font-size: .875rem;
+    color: var(--clr-neutral-text);
+
+    display: grid;
+    
+    place-content: center;
+    margin: 1rem;*/
+}
+
+/*@media (min-width: 600px) {
+    body {
+        display: grid;
+        align-items: center;
+        justify-content: center;
+    }
+}*/
+
+.container {
+    width: 600px;
+    max-width: 100%;
+    margin: auto;
+}
+
+header {
+    border: 3px solid var(--clr-neutral-header);
+    border-radius: .5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+    margin: 3.125rem 0;
+}
+
+h1 {
+    display: flex;
+    flex-direction: column;
+    text-transform: uppercase;
+    font-weight: lighter;
+    line-height: .9;
+    font-size: 3rem;
+}
+
+.score-container {
+    background-color: #fff;
+    padding: 1.25rem 2.5rem;
+    text-align: center;
+    border-radius: .5rem;
+}
+
+.score-container h4 {
+    letter-spacing: .125rem;
+    text-transform: uppercase;
+    color: var(--clr-neutral-text);
+} 
+
+.score-container p {
+    color: var(--clr-neutral-header);
+    font-size: 3.5rem;
+    font-weight: var(--fw-bold);
+} 
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 400px;
+    height: 350px;
+    margin: 0 auto;
+    position: relative;
+}
+
+main::after {
+    background-image: url('images/bg-triangle.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    content: '';
+    position: absolute;
+    height: 70%;
+    width: 70%;
+    top: 20%;
+    left: 15%;
+    z-index: -100;
+}
+
+/*Buttons*/
+
+.btn-circle {
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    border: none;
+    box-shadow: inset 0 -5px rgba(0,0,0,.15);
+    margin: 0 1.5rem;
+}
+
+
+.btn-circle .wrapper {
+    width: 120px;
+    height: 120px;
+    background-color: #fff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    box-shadow: inset 0 5px rgba(0,0,0,.15);
+}
+
+.btn-paper {
+    background: var(--clr-primary-paper);
+}
+
+.btn-rock {
+    background: var(--clr-primary-rock);
+}
+
+.btn-scissors {
+    background: var(--clr-primary-scissors);
+}
+
+.btn-rules {
+    border: 2px solid #fff;
+    cursor: pointer;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: transparent;
+    font-family: inherit;
+    border-radius: .3125rem;
+    font-size: 1.25rem;
+    letter-spacing: .625rem;
+    padding: 10px 25px;
+    position: fixed;
+    bottom: 25px;
+    right: 30px; 
+}
+
+.button:is(:hover, :focus) {
+    
+}
