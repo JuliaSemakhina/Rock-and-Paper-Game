@@ -132,6 +132,11 @@ h1 {
     font-size: 3rem;
 }
 
+h2 {
+      text-transform: uppercase; 
+      letter-spacing: .25rem;
+}
+
 .score-container {
     background-color: #fff;
     padding: 1.25rem 2.5rem;
@@ -178,12 +183,22 @@ main::after {
 /*Buttons*/
 
 .btn-circle {
+    cursor: pointer;
     height: 150px;
     width: 150px;
     border-radius: 50%;
     border: none;
     box-shadow: inset 0 -5px rgba(0,0,0,.15);
     margin: 0 1.5rem;
+}
+
+.btn-circle:focus {
+    transform: scale(.9);
+    outline: none;
+}
+
+.btn-circle:active {
+    transform: scale(.9);
 }
 
 
@@ -227,6 +242,39 @@ main::after {
     right: 30px; 
 }
 
-.button:is(:hover, :focus) {
-    
+
+.btn {
+    border: 2px solid #fff;
+    border-radius: .3125rem;
+    cursor: pointer;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--clr-neutral-dark);
+    background-color: #fff;
+    font-family: inherit;
+    font-size: 1.25rem;
+    letter-spacing: .25rem;
+}
+
+.selection {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    width: 50rem;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.selection .btn-circle {
+    margin: 50px;
+    transform: scale(1.4);
+}
+
+.big-text {
+    font-weight: lighter;
+    line-height: .9;
+    font-size: 3rem;
+    margin: 0 0 20px;
+    text-transform: uppercase;
 }

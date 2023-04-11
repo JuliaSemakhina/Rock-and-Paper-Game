@@ -24,25 +24,49 @@
     </header>
 
     <main>
-      <button class="btn-circle btn-paper" data-choice="paper">
+
+      <button class="btn-circle btn-paper pick" data-choice="paper">
         <span class="wrapper">
           <img src="images/icon-paper.svg" alt="paper">
         </span>
       </button>
-      <button class="btn-circle btn-scissors" data-choice="scissors">
+      <button class="btn-circle btn-scissors pick" data-choice="scissors">
         <span class="wrapper">
           <img src="images/icon-scissors.svg" alt="scissors">
         </span>       
         </button>
-        <button class="btn-circle btn-rock" data-choice="rock">
+        <button class="btn-circle btn-rock pick" data-choice="rock">
           <span class="wrapper">
           <img src="images/icon-rock.svg" alt="rock">
         </span>        
       </button>
     </main>
     
+
     <button class="btn-rules">Rules</button>
 </div>
+    <div class="selection">
+      <div>
+        <h2>You picked</h2>
+        <button class="btn-circle btn-paper">
+        <span class="wrapper">
+          <img src="images/icon-paper.svg" alt="paper">
+        </span>
+      </button>
+      </div>
+      <div>
+        <p class="big-text">You <span class="win">win</span></p>
+        <button class="btn" id="reset">Play again</button>
+      </div>
+      <div>
+        <h2>The house picked</h2>
+        <button class="btn-circle btn-rock">
+          <span class="wrapper">
+          <img src="images/icon-rock.svg" alt="rock">
+        </span>        
+      </button>
+      </div>
+    </div>
   <script  src="script.js" defer></script>
 </body>
 </html>
